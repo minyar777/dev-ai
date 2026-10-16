@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Exercice 1</title>
+		<!-- Lien vers le fichier CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+		<!-- Lien vers le fichier JavaScript -->
+		<script src="script.js" defer></script>
+		
+		</style>
+	</head>
+	<body onload="chargerzoneitem()">
+		<div id="entete">
+			<h1>Zone d'entete </h1>
+				<div id="panier">Nbre item : <span id="idItem">0</span>
+			</div>
+		</div>
+		
+		<div id="zoneContenuItem">
+			
+		</div>
+		<div id="zoneContenuFacture">
+			<table border="1" width="50%" align="center">
+				<thead>
+					<th>Description</th>
+					<th>Quantite</th>
+					<th>Prix unitaire</th>					
+				</thead>
+				<tbody id="corpsTableau">
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

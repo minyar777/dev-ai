@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Exercice 1</title>
+		<!-- Lien vers le fichier CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+		<!-- Lien vers le fichier JavaScript -->
+		<script src="script2.js" defer></script>
+		
+		<style>
+			#zoneDetail {
+				position: fixed !important;
+				top: 120px !important;
+				left: 50% !important;
+				transform: translateX(-50%) !important;
+				width: 700px !important;
+				max-width: 90% !important;
+				min-height: 220px !important;
+				background: #fff !important;
+				color: #000 !important;
+				border: 1px solid #999 !important;
+				z-index: 9999 !important;
+				visibility: visible !important;
+				overflow: hidden;
+				text-align: left;
+			}
+			#zoneDetail #petiteEntete {
+				background: blue;
+				color: #fff;
+				text-align: right;
+				font-weight: bold;
+				padding: 2px 8px;
+			}
+			#zoneDetail #idFermerDialogue { cursor: pointer; }
+			#zoneDetail #uneImage {
+				float: left;
+				width: 200px;
+				margin: 10px;
+			}
+			#zoneDetail #txtQuantite { width: 120px; }
+			#zoneDetail #unAjout {
+				background: red;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+				padding: 10px;
+				margin: 15px 10px 10px 0;
+				border-radius: 5px;
+				cursor: pointer;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body onload="chargerzoneitem()">
+		<div id="entete">
+			<h1>Zone d'entete </h1>
+				<div id="panier" onclick="afficheFacture()">Nbre item : <span id="idItem">0</span>
+			</div>
+		</div>
+		
+		<div id="zoneContenuItem">
+			</div>
+		<div id="zoneDetail" style="display:none;">
+			<div id="petiteEntete">
+				<span id="idFermerDialogue" onclick="fermerDialogue();">Fermer</span>
+			</div>
+			<img id="uneImage" />
+			<div>
+				Description : <span id="uneDescription">XXX</span>
+			</div>
+			<div>
+				Prix : <span id="unPrix">XXX</span>
+			</div>
+			<div>
+				Detail : <span id="unDetail">XXX</span>
+			</div>
+			<div>
+				Qte : <input type="text" id="txtQuantite" value="1" />
+			</div>
+			<div id="unAjout">Ajouter</div>
+		</div>
+		<div id="zoneContenuFacture">
+			<table border="1" width="50%" align="center">
+				<thead>
+					<th>Description</th>
+					<th>Quantite</th>
+					<th>Prix unitaire</th>					
+				</thead>
+				<tbody id="corpsTableau">
+				</tbody>
+				<tfoot>
+					<tr>
+						<th colspan="2">Sous total: </th>
+						<th id="idSousTotal">x</th>
+					</tr>
+					<tr> 
+						<th colspan="2">total tva: </th>
+						<th id="idTVA">x</th>
+					</tr>
+					<tr>
+						<th colspan="2">total</th>
+						<th id="idTotal"></th>
+					</tr>
+
+				</tfoot>
+			</table>
+		</div>
+	</body>
+</html>
